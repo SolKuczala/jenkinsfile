@@ -15,9 +15,9 @@ pipeline {
         }
 
         stage('Checkout') {
-	  		steps {
-                script {
-		  			checkout([$class : 'GitSCM', ,
+	  	steps {
+                	script {
+		  		checkout([$class : 'GitSCM', ,
 			    	doGenerateSubmoduleConfigurations: false,
 			    	submoduleCfg : [],
 			    	branches : [[name: "${env.BUILD_BRANCH}"]],
